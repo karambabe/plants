@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+		}
+		.img1 {
+			position: absolute;
+			height: 1000px;
+			width: 2000px;
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			display: none;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 300px; margin-left: 600px">		
+		<img class="shooter" src="peashooter.png"  style="top: 420px; margin-left: 600px">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; margin-left: 600px">	
+		<img class="shooter" src="peashooter.png"  style="top: 670px; margin-left: 600px">
+		<img class="shooter" src="peashooter.png"  style="top: 800px; margin-left: 600px">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 235px; margin-left: 1470px">
+		<img class="zombies" src="zombie2.png" style="top: 380px; margin-left: 1480px">
+		<img class="zombies" src="zombie2.png" style="top: 510px; margin-left: 1490px">
+		<img class="zombies" src="zombie4.png" style="top: 635px; margin-left: 1500px">
+		<img class="zombies" src="zombie4.png" style="top: 765px; margin-left: 1510px">
+		<div class="img1"></div>
+	</div>
+<script type="text/javascript">
+	let zombi = document.querySelectorAll('.zombies');
+	let shoot = document.querySelectorAll('.shooter');
+	let im = document.querySelectorAll('.img1');
+	let left = 1510;
+	let left1 = 1510;
+	let left2 = 1510;
+	let left3 = 1510;
+	let left4 = 1510;
+	zombi[0].onclick = function() {
+		left = left - 120;
+		console.log(left);
+		zombi[0].style.marginLeft = left + "px";
+		if(left==550) {
+			shoot[0].style.display = "none"
+		} 
+		if(left==430) {
+			im[0].style.display = "block"
+			zombi.style.display = "none"
+			shoot.style.display = "none"
+		} 
+	}
+	zombi[1].onclick = function() {
+		left1 = left1 - 120;
+		console.log(left1);
+		zombi[1].style.marginLeft = left1 + "px"; 
+		if(left1==550) {
+			shoot[1].style.display = "none"
+		} 
+		if(left1==430) {
+			im[0].style.display = "block"
+			zombi.style.display = "none"
+			shoot.style.display = "none"
+		} 
+	}
+	zombi[2].onclick = function() {
+		left2 = left2 - 120;
+		console.log(left2);
+		zombi[2].style.marginLeft = left2 + "px";
+		if(left2==550) {
+			shoot[2].style.display = "none"
+		} 
+		if(left2==430) {
+			im[0].style.display = "block"
+			zombi.style.display = "none"
+			shoot.style.display = "none"
+		}  
+	}
+	zombi[3].onclick = function() {
+		left3 = left3 - 120;
+		console.log(left3);
+		zombi[3].style.marginLeft = left3 + "px"; 
+		if(left3==550) {
+			shoot[3].style.display = "none"
+		} 
+		if(left3==430) {
+			im[0].style.display = "block"
+			zombi.style.display = "none"
+			shoot.style.display = "none"
+		} 
+	}
+	zombi[4].onclick = function() {
+		left4 = left4 - 120;
+		console.log(left4);
+		zombi[4].style.marginLeft = left4 + "px";
+		if(left4==550) {
+			shoot[4].style.display = "none"
+		} 
+		if(left4==430) {
+			im[0].style.display = "block"
+			zombi.style.display = "none"
+			shoot.style.display = "none"
+		} 
+	}
+
+
+
+
+</script>
+</body>
+</html>
